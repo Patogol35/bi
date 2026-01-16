@@ -1,9 +1,11 @@
-from rest_framework.decorators import api_view
+from rest_framework.decorators import api_view, parser_classes
 from rest_framework.response import Response
+from rest_framework.parsers import JSONParser, FormParser, MultiPartParser
 from django.core.mail import send_mail
 from django.conf import settings
 
 @api_view(["POST"])
+@parser_classes([JSONParser, FormParser, MultiPartParser])
 def contact_view(request):
     name = request.data.get("from_name")
     email = request.data.get("from_email")
@@ -11,7 +13,10 @@ def contact_view(request):
 
     if not name or not email or not message:
         return Response(
-            {"error": "Todos los campos son obligatorios"},
+            {
+                "error": "Todos los campos son obligatorios",
+                "debug": request.data
+            },
             status=400
         )
 

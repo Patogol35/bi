@@ -1,18 +1,16 @@
- FastAPI Books CRUD
+ Contact API – Django REST Framework
 
-Este proyecto es una API REST construida con FastAPI y MySQL que permite realizar operaciones CRUD (Crear, Leer, Actualizar y Eliminar) sobre una colección de libros.
+API sencilla de contacto desarrollada con Django 5 y Django REST Framework, que permite recibir mensajes desde un formulario y enviarlos por correo electrónico usando SMTP de Gmail.
 
 ---
 
 ⚙️ Tecnologías utilizadas
 
-- FastAPI
-
-- MySQL
-
-- SQLAlchemy
-
-- Uvicorn
+- Python 
+- Django
+- Django REST Framework 
+- python-dotenv
+- SMTP Gmail
 
 ⚙️ Requisitos previos
 
@@ -28,23 +26,7 @@ Antes de ejecutar el proyecto, asegúrate de tener instalado:
 
 🗄️ Configuración de la base de datos
 
-Entra a MySQL con tu usuario:
 
-mysql -u root -p
-
-Crea la base de datos:
-
-CREATE DATABASE fastapi_books;
-
-En este proyecto usamos:
-
-Usuario: root
-
-Contraseña: patricio12
-
-Base de datos: fastapi_books
-
----
 
 📦 Instalación y ejecución 
 
@@ -52,7 +34,7 @@ Base de datos: fastapi_books
 
 ```bash
 
-git clone https://github.com/Patogol35/fastapi-books-api.git
+git clone https://github.com/Patogol35/bi
 
 ```
 
@@ -60,7 +42,7 @@ git clone https://github.com/Patogol35/fastapi-books-api.git
 
 ```bash
 
-cd fastapi-books-crud
+cd bi
 
 ```
 
@@ -97,11 +79,32 @@ pip install -r requirements.txt
 
 ```
 
-5. Ejecuta el servidor
+5. Variables de entorno (.env)
+Crea un archivo .env en la raíz del pro
 
 ```bash
 
-uvicorn main:app --reload
+EMAIL_HOST_USER=tu_correo@gmail.com
+EMAIL_HOST_PASSWORD=tu_clave_de_aplicacion
+SECRET_KEY=tu_secret_key
+
+```
+Nota
+Para Gmail debes usar una clave de aplicación, no tu contraseña normal.
+Si no defines SECRET_KEY, la app funcionará en local con una clave insegura por defecto (solo para desarrollo).
+
+6. Endpoint disponible
+POST /api/contact/
+Envía un mensaje de contacto por correo.
+🔸 Body (JSON)
+
+```bash
+
+{
+  "from_name": "Jorge Patricio",
+  "from_email": "jorge-pateicio@gmail.com",
+  "message": "aquí escribes tu mensaje"
+}
 
 ```
 

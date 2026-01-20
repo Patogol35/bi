@@ -1,10 +1,10 @@
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from rest_framework import status
-from django.core.mail import send_mail
 from django.conf import settings
 from django.core.validators import validate_email
 from django.core.exceptions import ValidationError
+from django.core.mail import EmailMessage
 
 
 @api_view(["POST"])
@@ -35,17 +35,18 @@ def contact_view(request):
     )
 
     try:
-        send_mail(
+        email_message = EmailMessage(
             subject="Nuevo mensaje desde el portafolio",
-            message=full_message,
+            body=full_message,
             from_email=settings.DEFAULT_FROM_EMAIL,
-            recipient_list=[settings.DEFAULT_FROM_EMAIL],
+            to=[settings.DEFAULT_FROM_EMAIL],
             reply_to=[email],
-            fail_silently=False,
         )
+        email_message.send(fail_silently=False)
+
     except Exception as e:
         return Response(
-            {"error": str(e)},  # ← MOSTRAR ERROR REAL
+            {"error": str(e)},
             status=status.HTTP_500_INTERNAL_SERVER_ERROR,
         )
 

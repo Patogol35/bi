@@ -77,7 +77,6 @@ SECRET_KEY=tu_secret_key
 
 ```
 📌 Nota:
-Para Gmail es obligatorio usar una clave de aplicación, no tu contraseña personal.
 Si no defines SECRET_KEY, el proyecto funcionará en local con una clave insegura (solo para desarrollo).
 
 6. Configuración de Gmail (SMTP)
@@ -118,7 +117,7 @@ python manage.py runserver
 Servidor disponible en:
 
 
-👉 http://127.0.0.1:8000
+👉 http://127.0.0.1:8000/api/contact/
 
 ---
 
@@ -134,7 +133,7 @@ POST /api/contact/
 
 {
   "from_name": "Jorge Patricio",
-  "from_email": "jorge-pateicio@gmail.com",
+  "from_email": "patogol3535@gmail.com",
   "message": "aquí escribes tu mensaje"
 }
 

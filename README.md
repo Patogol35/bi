@@ -80,7 +80,16 @@ Nota
 Para Gmail debes usar una clave de aplicación, no tu contraseña normal.
 Si no defines SECRET_KEY, la app funcionará en local con una clave insegura por defecto (solo para desarrollo).
 
-6. Endpoint disponible
+6. El servidor estará disponible en:
+
+👉 http://127.0.0.1:8000
+
+---
+
+🔗 Endpoints disponibles
+
+🔹 Enviar un mensaje al correo 
+
 POST /api/contact/
 Envía un mensaje de contacto por correo.
 🔸 Body (JSON)
@@ -95,58 +104,6 @@ Envía un mensaje de contacto por correo.
 
 ```
 
-
-7. El servidor estará disponible en:
-
-👉 http://127.0.0.1:8000
-
----
-
-🔗 Endpoints disponibles
-
-🔹 Crear un libro
-
-POST /books/
-
-Body (JSON):
-
-{
-  "title": "Las Catilinarias",
-  "author": "Juan Montalvo",
-  "year": 1880
-}
-
-🔹 Obtener todos los libros
-
-GET /books/
-
-🔹 Obtener un libro por ID
-
-GET /books/{book_id}
-
-Ejemplo:
-
-/books/1
-
-🔹 Actualizar un libro
-
-PUT /books/{book_id}
-
-Body (JSON):
-
-{
-  "title": "El Cosmopolita",
-  "author": "Juan Montalvo",
-  "year": 1886
-}
-
-🔹 Eliminar un libro
-
-DELETE /books/{book_id}
-
-Ejemplo:
-
-/books/1
 
 --- 
 

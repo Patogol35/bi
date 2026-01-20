@@ -66,8 +66,9 @@ pip install -r requirements.txt
 
 ```
 
-5. Variables de entorno 
-Crea un archivo .env en la raíz del pro
+5. Variables de entorno:
+ 
+Crea un archivo .env en la raíz del proyecto
 
 ```bash
 

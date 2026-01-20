@@ -1,6 +1,6 @@
 Backend de formulario de contacto (Django + Gmail SMTP)
 
-API sencilla de contacto desarrollada con Django 5 y Django REST Framework, que permite recibir mensajes desde un formulario y enviarlos directamente al correo electrónico utilizando SMTP de Gmail.
+API de contacto desarrollada con Django 5 y Django REST Framework, diseñada para recibir mensajes desde un formulario web y enviarlos de forma segura al correo electrónico mediante SMTP de Gmail.
 
 ---
 

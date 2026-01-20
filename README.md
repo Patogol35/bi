@@ -1,4 +1,4 @@
- Backend para formulario de contacto al correo electrónico 
+ Backend de un formulario de contacto para emviar mensajes al correo electrónico 
 
 API sencilla de contacto desarrollada con Django 5 y Django REST Framework, que permite recibir mensajes desde un formulario y enviarlos por correo electrónico usando SMTP de Gmail.
 

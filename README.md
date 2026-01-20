@@ -80,7 +80,15 @@ Nota
 Para Gmail debes usar una clave de aplicación, no tu contraseña normal.
 Si no defines SECRET_KEY, la app funcionará en local con una clave insegura por defecto (solo para desarrollo).
 
-6. El servidor estará disponible en:
+6. Ejecuta el servidor 
+
+```bash
+
+python manage.py runserver
+
+```
+
+El servidor estará disponible en:
 
 👉 http://127.0.0.1:8000
 

@@ -1,4 +1,4 @@
- Contact API – Django REST Framework
+ Backend para formulario de contacto al correo electrónico 
 
 API sencilla de contacto desarrollada con Django 5 y Django REST Framework, que permite recibir mensajes desde un formulario y enviarlos por correo electrónico usando SMTP de Gmail.
 
@@ -12,20 +12,7 @@ API sencilla de contacto desarrollada con Django 5 y Django REST Framework, que 
 - python-dotenv
 - SMTP Gmail
 
-⚙️ Requisitos previos
-
-Antes de ejecutar el proyecto, asegúrate de tener instalado:
-
-- Python 3.9+
-
-- MySQL Server
-
-- pip (gestor de paquetes de Python)
-
 ---
-
-🗄️ Configuración de la base de datos
-
 
 
 📦 Instalación y ejecución 
@@ -34,7 +21,7 @@ Antes de ejecutar el proyecto, asegúrate de tener instalado:
 
 ```bash
 
-git clone https://github.com/Patogol35/bi
+https://github.com/Patogol35/contacto-backend-gmail/
 
 ```
 
@@ -42,7 +29,7 @@ git clone https://github.com/Patogol35/bi
 
 ```bash
 
-cd bi
+cd contacto-backend-gmail/
 
 ```
 
@@ -109,16 +96,9 @@ Envía un mensaje de contacto por correo.
 ```
 
 
-6. El servidor estará disponible en:
+7. El servidor estará disponible en:
 
 👉 http://127.0.0.1:8000
-
-
-La documentación interactiva estará en:
-
-Swagger UI → http://127.0.0.1:8000/docs
-
-ReDoc → http://127.0.0.1:8000/redoc
 
 ---
 

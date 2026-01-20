@@ -158,6 +158,7 @@ Error (campos faltantes)
 👨‍💻 Autor
 
 Jorge Patricio Santamaría Cherrez
+
 Máster en Ingeniería de Software y Sistemas Informáticos
 
 

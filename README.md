@@ -104,18 +104,20 @@ Envía un mensaje de contacto por correo.
 
 ```
 Respuesta exitosa
-Copiar código
-Json
+
+```bash
 {
   "success": "Mensaje enviado correctamente"
 }
+
+```
 ❌ Error (campos faltantes)
-Copiar código
-Json
+
+```bash
 {
   "error": "Todos los campos son obligatorios"
 }
-
+```
 --- 
 
 👨‍💻 Autor

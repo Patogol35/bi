@@ -14,7 +14,6 @@ API sencilla de contacto desarrollada con Django 5 y Django REST Framework, que 
 
 ---
 
-
 📦 Instalación y ejecución 
 
 1. Clona el repositorio:
@@ -81,7 +80,34 @@ SECRET_KEY=tu_secret_key
 Para Gmail es obligatorio usar una clave de aplicación, no tu contraseña personal.
 Si no defines SECRET_KEY, el proyecto funcionará en local con una clave insegura (solo para desarrollo).
 
-6. Ejecutar el servidor 
+6. Configuración de Gmail (SMTP)
+
+Para que el envío de correos funcione, es obligatorio generar una clave de aplicación en tu cuenta de Google.
+No se debe usar la contraseña personal de Gmail.
+
+Pasos:
+
+- Activa la verificación en dos pasos en tu cuenta de Google.
+  
+- Ve a Seguridad → Claves de aplicación.
+  
+- Crea una nueva clave para Correo.
+  
+- Copia la clave generada.
+  
+⚠️ Importante sobre la clave de aplicación
+
+Google muestra la clave de aplicación separada por espacios (por ejemplo: abcd efgh ijkl mnop), pero en el archivo .env debe copiarse SIN espacios.
+
+```bash
+
+EMAIL_HOST_USER=tu_correo@gmail.com
+EMAIL_HOST_PASSWORD=abcdefghijklmnop
+SECRET_KEY=tu_secret_key
+
+```
+
+7. Ejecutar el servidor 
 
 ```bash
 

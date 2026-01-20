@@ -142,6 +142,7 @@ Respuesta exitosa
 
 
 {
+
   "success": "Mensaje enviado correctamente"
 }
 
@@ -150,6 +151,7 @@ Error (campos faltantes)
 
 
 {
+
   "error": "Todos los campos son obligatorios"
 }
 

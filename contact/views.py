@@ -45,7 +45,7 @@ def contact_view(request):
         )
     except Exception as e:
         return Response(
-            {"error": "Error al enviar el correo"},
+            {"error": str(e)},  # ← MOSTRAR ERROR REAL
             status=status.HTTP_500_INTERNAL_SERVER_ERROR,
         )
 

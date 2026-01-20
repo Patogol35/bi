@@ -45,10 +45,10 @@ def contact_view(request):
         email_message.send(fail_silently=False)
 
     except Exception:
-    return Response(
-        {"error": "No se pudo enviar el mensaje. Inténtalo más tarde."},
-        status=status.HTTP_500_INTERNAL_SERVER_ERROR,
-    )
+        return Response(
+            {"error": "No se pudo enviar el mensaje. Inténtalo más tarde."},
+            status=status.HTTP_500_INTERNAL_SERVER_ERROR,
+        )
 
     return Response(
         {"success": "Mensaje enviado correctamente"},

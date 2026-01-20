@@ -1,6 +1,6 @@
- Backend de un formulario de contacto para emviar mensajes al correo electrónico 
+Backend de formulario de contacto (Django + Gmail SMTP)
 
-API sencilla de contacto desarrollada con Django 5 y Django REST Framework, que permite recibir mensajes desde un formulario y enviarlos por correo electrónico usando SMTP de Gmail.
+API sencilla de contacto desarrollada con Django 5 y Django REST Framework, que permite recibir mensajes desde un formulario y enviarlos directamente al correo electrónico utilizando SMTP de Gmail.
 
 ---
 
@@ -10,7 +10,7 @@ API sencilla de contacto desarrollada con Django 5 y Django REST Framework, que 
 - Django
 - Django REST Framework 
 - python-dotenv
-- SMTP Gmail
+- SMTP (Gmail)
 
 ---
 
@@ -33,7 +33,7 @@ cd contacto-backend-gmail/
 
 ```
 
-3. Crea un entorno virtual e instalalo:
+3. Crea y activa un entorno virtual:
 
 ```bash
 
@@ -66,7 +66,7 @@ pip install -r requirements.txt
 
 ```
 
-5. Variables de entorno (.env)
+5. Variables de entorno 
 Crea un archivo .env en la raíz del pro
 
 ```bash
@@ -76,11 +76,11 @@ EMAIL_HOST_PASSWORD=tu_clave_de_aplicacion
 SECRET_KEY=tu_secret_key
 
 ```
-Nota
-Para Gmail debes usar una clave de aplicación, no tu contraseña normal.
-Si no defines SECRET_KEY, la app funcionará en local con una clave insegura por defecto (solo para desarrollo).
+📌 Nota:
+Para Gmail es obligatorio usar una clave de aplicación, no tu contraseña personal.
+Si no defines SECRET_KEY, el proyecto funcionará en local con una clave insegura (solo para desarrollo).
 
-6. Ejecuta el servidor 
+6. Ejecutar el servidor 
 
 ```bash
 
@@ -88,7 +88,8 @@ python manage.py runserver
 
 ```
 
-El servidor estará disponible en:
+Servidor disponible en:
+
 
 👉 http://127.0.0.1:8000
 
@@ -99,7 +100,7 @@ El servidor estará disponible en:
 🔹 Enviar un mensaje al correo 
 
 POST /api/contact/
-Envía un mensaje de contacto por correo.
+
 🔸 Body (JSON)
 
 ```bash
@@ -113,19 +114,19 @@ Envía un mensaje de contacto por correo.
 ```
 Respuesta exitosa
 
-```bash
+
 {
   "success": "Mensaje enviado correctamente"
 }
 
-```
-❌ Error (campos faltantes)
 
-```bash
+Error (campos faltantes)
+
+
 {
   "error": "Todos los campos son obligatorios"
 }
-```
+
 --- 
 
 👨‍💻 Autor

@@ -44,11 +44,11 @@ def contact_view(request):
         )
         email_message.send(fail_silently=False)
 
-    except Exception as e:
-        return Response(
-            {"error": str(e)},
-            status=status.HTTP_500_INTERNAL_SERVER_ERROR,
-        )
+    except Exception:
+    return Response(
+        {"error": "No se pudo enviar el mensaje. Inténtalo más tarde."},
+        status=status.HTTP_500_INTERNAL_SERVER_ERROR,
+    )
 
     return Response(
         {"success": "Mensaje enviado correctamente"},

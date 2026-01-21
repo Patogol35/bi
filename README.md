@@ -20,7 +20,7 @@ API de contacto desarrollada con Django 5 y Django REST Framework, diseñada par
 
 ```bash
 
-https://github.com/Patogol35/contacto-backend-gmail/
+git clone https://github.com/Patogol35/contacto-backend-gmail/
 
 ```
 
